@@ -13,15 +13,16 @@ BONUS: Create a boolean variable markHigherBMI containing information about whet
 
 TEST DATA: Marks weighs 78 kg and is 1.69 m tall. John weighs 92 kg and is 1.95 m tall.
 */
-let massMark = 78;
-let heightMark = 1.69;
+const massMark = 78;
+const heightMark = 1.69;
 
-let massJohn = 92;
-let heightJohn = 1.95;
+const massJohn = 92;
+const heightJohn = 1.95;
 
-let BMIJohn = massJohn / (heightJohn * heightJohn);
-let BMIMark = massMark / (heightMark * heightMark);
+const BMIJohn = massJohn / (heightJohn * heightJohn);
+const BMIMark = massMark / (heightMark * heightMark);
 
-let markHigherBMI = BMIMark > BMIJohn;
+const markHigherBMI = BMIMark > BMIJohn;
+
 console.log(BMIMark, BMIJohn);
 console.log(markHigherBMI);
