@@ -29,12 +29,12 @@ TEST DATA 2: Dolphins scored 85, 54, and 41. Koalas scored 23, 34, and 27.
 */
 /* Write your code below. Good luck! 🙂 */
 
-const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+const calcAverage = (a, b, c) => (a + b + c) / 3;
 
 function checkWinner(score1, score2, team1, team2) {
-    if(score1 > score2) {
+    if(score1 >= score2 * 2) {
         console.log(`${team1} win (${score1} vs. ${score2})`);
-    } else if(score1 < score2) {
+    } else if(score2 >= score1 * 2) {
         console.log(`${team2} win (${score2} vs. ${score1})`);
     } else {
         console.log("No team wins...");
