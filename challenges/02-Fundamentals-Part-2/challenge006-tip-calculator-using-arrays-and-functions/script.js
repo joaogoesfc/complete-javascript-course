@@ -17,26 +17,24 @@ TEST DATA: 125, 555, and 44.
 */
 /* Write your code below. Good luck! 🙂 */
 
-function calcTip(bill) {
-    if (bill >= 50 && bill <= 300) {
-        return bill * 0.15;
-    } else return bill * 0.20;
-}
-
 let bills = [];
 
 let tips = [];
 
 let totals = [];
 
-function calc(bill, bills, tips, totals) {
+addValues(125, bills, tips, totals);
+addValues(555, bills, tips, totals);
+addValues(44, bills, tips, totals);
+
+console.log(bills, tips, totals);
+
+function calcTip(bill) {
+    return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
+}
+
+function addValues(bill, bills, tips, totals) {
     bills.push(bill);
     tips.push(calcTip(bill));
     totals.push(calcTip(bill) + bill);
 }
-
-calc(125, bills, tips, totals);
-calc(555, bills, tips, totals);
-calc(44, bills, tips, totals);
-
-console.log(bills, tips, totals);
