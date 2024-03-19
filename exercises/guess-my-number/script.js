@@ -10,8 +10,10 @@ addEventListener('click', function () {
   document.querySelector('.score').textContent = score;
   if (!guess) {
     console.log('No number!');
-  } else if (guess === randomNumber) {
+  } else if (guess == randomNumber) {
     document.querySelector('.message').textContent = 'Correct!';
+    this.document.querySelector('body').style.backgroundColor = "green";
+    this.document.querySelector('.number').style.width = "30rem";
     randomNumber = Math.trunc(Math.random() * 20);
     console.log(randomNumber);
   } else if (guess < 0 || guess > 20) {
